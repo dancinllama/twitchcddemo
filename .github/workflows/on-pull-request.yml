@@ -11,9 +11,6 @@ jobs:
       - name: "Update container version of git"
         run: |
            apt-get update && apt-get install software-properties-common -y && apt-add-repository ppa:git-core/ppa && apt-get update && apt-get install -y git
-          
-      - name: "Add Accenture Powerkit Plugin"
-        run: echo 'y' | sfdx plugins:install -f sfpowerkit
       
       - name: "Checkout code"
         uses: actions/checkout@v2
@@ -26,7 +23,7 @@ jobs:
       - name: Updating SFDX
         run: sfdx update
         
-      - name: Authenticate with SFDX using username and password, and set as default for additional sdfx commands 
+      - name: Authenticate with SFDX using JWT, and set as default for additional sdfx commands 
         run: sfdx force:auth:jwt:grant --clientid ${{ secrets.SALESFORCE_CONSUMER_KEY }} -username ${{ secrets.SALESFORCE_USERNAME }} --jwtkeyfile ./certficates/server.key -a checkout
         
       - name: Set Default SFDX target org
