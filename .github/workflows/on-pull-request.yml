@@ -26,8 +26,8 @@ jobs:
       - name: Updating SFDX
         run: sfdx update
         
-      - name: Authenticate with SFDX using username and password, and set as default for additional sdfx commands
-        run: sfdx sfpowerkit:auth:login -r ${{ secrets.SALESFORCE_URL }} -u ${{ secrets.SALESFORCE_USERNAME }} -p ${{ secrets.SALESFORCE_PASSWORD }} -a checkout
+      - name: Authenticate with SFDX using username and password, and set as default for additional sdfx commands 
+        run: sfdx force:auth:jwt:grant --clientid ${{ secrets.SALESFORCE_CONSUMER_KEY }} -username ${{ secrets.SALESFORCE_USERNAME }} --jwtkeyfile ./certficates/server.key -a checkout
         
       - name: Set Default SFDX target org
         run: sfdx force:config:set defaultusername=checkout
