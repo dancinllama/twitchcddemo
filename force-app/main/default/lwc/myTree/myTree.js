@@ -16,17 +16,17 @@ export default class myTree extends LightningElement {
                             label: 'CA Sales Rep',
                             name: '3',
                             expanded: true,
-                            items: [],
+                            items: []
                         },
                         {
                             label: 'OR Sales Rep',
                             name: '4',
                             expanded: true,
-                            items: [],
-                        },
-                    ],
-                },
-            ],
+                            items: []
+                        }
+                    ]
+                }
+            ]
         },
         {
             label: 'Eastern Sales Director',
@@ -42,17 +42,17 @@ export default class myTree extends LightningElement {
                             label: 'NY Sales Rep',
                             name: '7',
                             expanded: true,
-                            items: [],
+                            items: []
                         },
                         {
                             label: 'MA Sales Rep',
                             name: '8',
                             expanded: true,
-                            items: [],
-                        },
-                    ],
-                },
-            ],
+                            items: []
+                        }
+                    ]
+                }
+            ]
         },
         {
             label: 'International Sales Director',
@@ -68,15 +68,15 @@ export default class myTree extends LightningElement {
                             label: 'Sales Rep1',
                             name: '11',
                             expanded: true,
-                            items: [],
+                            items: []
                         },
                         {
                             label: 'Sales Rep2',
                             name: '12',
                             expanded: true,
-                            items: [],
-                        },
-                    ],
+                            items: []
+                        }
+                    ]
                 },
                 {
                     label: 'Europe Sales Manager',
@@ -87,17 +87,17 @@ export default class myTree extends LightningElement {
                             label: 'Sales Rep1',
                             name: '14',
                             expanded: true,
-                            items: [],
+                            items: []
                         },
                         {
                             label: 'Sales Rep2',
                             name: '15',
                             expanded: true,
-                            items: [],
-                        },
-                    ],
-                },
-            ],
-        },
+                            items: []
+                        }
+                    ]
+                }
+            ]
+        }
     ];
 }
